@@ -49,9 +49,9 @@ fetch("./international_rankings.json")
 
 Example output:
 
-```json
+```jsonc
 [
-    ...,
+    // ...,
     {
         "title": "Human Development Index",
         "version": "2021",
@@ -59,6 +59,6 @@ Example output:
         "rank": 1,
         "score": 0.962
     },
-    ...
+    // ...
 ]
 ```
