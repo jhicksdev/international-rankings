@@ -30,35 +30,35 @@ The database contains values from the following reports and indexes.
 Select the _INTERNATIONAL_RANKINGS_ table using the `sqlite3` command:
 
 ```bash
-sqlite3 main.db 'SELECT * FROM INTERNATIONAL_RANKINGS'
+sqlite3 ./main.db 'SELECT * FROM INTERNATIONAL_RANKINGS'
 ```
 
 Generate a JSON file containing the table records using this command:
 
 ```bash
-python3 to_json.py
+python3 ./to_json.py
 ```
 
 Fetch the JSON data using the JavaScript Fetch API:
 
 ```javascript
-fetch("./international_rankings.json")
+fetch("./records.json")
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((records) => console.log(records));
 ```
 
 Example output:
 
 ```jsonc
 [
-    // ...,
-    {
-        "title": "Human Development Index",
-        "version": "2021",
-        "country_name": "Switzerland",
-        "rank": 1,
-        "score": 0.962
-    },
-    // ...
+  // ...,
+  {
+    "title": "Human Development Index",
+    "version": "2021",
+    "country_name": "Switzerland",
+    "rank": 1,
+    "score": 0.962
+  }
+  // ...
 ]
 ```
