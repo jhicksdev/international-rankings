@@ -35,7 +35,7 @@ fetch(
   "https://raw.githubusercontent.com/jhicksdev/international-rankings/main/rankings.min.json"
 )
   .then((response) => response.json())
-  .then((records) => console.log(records));
+  .then((rankings) => console.log(rankings));
 ```
 
 Example output:
