@@ -31,11 +31,11 @@ The dataset contains records from the following reports and indexes.
 Fetch the dataset using the JavaScript Fetch API:
 
 ```javascript
-fetch(
+const response = await fetch(
   "https://raw.githubusercontent.com/jhicksdev/international-rankings/main/rankings.min.json"
-)
-  .then((response) => response.json())
-  .then((rankings) => console.log(rankings));
+);
+const rankings = await response.json();
+console.log(rankings);
 ```
 
 Example output:
