@@ -1,3 +1,4 @@
+from datetime import date
 import json
 import pathlib
 
@@ -56,10 +57,12 @@ with open(f"{DIRNAME}/rankings.tsv") as file:
         )
     file.close()
 
+json_data = {"version": date.today().strftime("%Y.%m.%d").replace(".0", "."), "rankings": rankings}
+
 with open(f"{DIRNAME}/rankings.json", "w") as file:
-    json.dump(rankings, file, ensure_ascii=False, indent=2)
+    json.dump(json_data, file, ensure_ascii=False, indent=4)
     file.close()
 
 with open(f"{DIRNAME}/rankings.min.json", "w") as file:
-    json.dump(rankings, file, separators=(",", ":"), ensure_ascii=False)
+    json.dump(json_data, file, separators=(",", ":"), ensure_ascii=False)
     file.close()
