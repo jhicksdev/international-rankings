@@ -40,18 +40,22 @@ console.log(rankings);
 
 Example output:
 
-```json
-[
-  {
-    "title": "Human Development Index",
-    "version": 2021,
-    "records": [
-      {
-        "country": "Switzerland",
-        "rank": 1,
-        "score": 0.962
-      }
-    ]
-  }
-]
+```jsonc
+{
+  "version": "2023.5.3",
+  "rankings": [
+    {
+      "title": "Human Development Index",
+      "version": 2021,
+      "records": [
+        {
+          "country": "Switzerland",
+          "rank": 1,
+          "score": 0.962
+        }
+      ]
+    }
+  ]
+}
+
 ```
